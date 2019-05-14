@@ -9,11 +9,11 @@ mocha 02_largestNumber.js
 Question: Why does the test pass for the third (last) test 
 with no changes to the function?
 */
+const isNumber = x => typeof x === "number"
 
-function largestNumber(arr) {
-    // Your code here
-    // Google JS syntax ;)
-}
+const largestNumber = arr => (
+  arr.length > 0 ? Math.max(...arr.filter(isNumber)) : null
+)
 
 var assert = require('assert');
 
