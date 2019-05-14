@@ -12,7 +12,7 @@ with no changes to the function?
 const isNumber = x => typeof x === "number"
 
 const largestNumber = arr => (
-  arr.length > 0 ? Math.max(...arr.filter(isNumber)) : null
+  arr.length ? Math.max(...arr.filter(isNumber)) : null
 )
 
 var assert = require('assert');
